@@ -1,454 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>ICICI Credit Origination System - ICICI BANK</title>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-    <meta name="keywords" content="ICICI Bank | Channel Finance Online">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/fixedHeader.bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-	
-	<!--SCRIPT JS-->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/jquery.dataTables.js"></script>
-	<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-	<script type="text/javascript" src="js/dataTables.fixedHeader.js"></script>
-	<script type="text/javascript" src="js/dataTables.responsive.js"></script>
-	<script type="text/javascript" src="js/responsive.bootstrap.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-</head>
-<!-- //Head -->
-<!-- Body -->
-<body>
-<!--Loader Start-->
-<div class="loading" hidden>
-   <div class="mask"></div>
-	<div class="cssload-loader"><span class="cssload-loader-inner"></span></div>
-	<div class="processRequest">Processing your request</div>
-</div>
-<!--Loader End-->
-<!--Left Side Slide Start-->
-<div id="mySidenav" class="sidenav">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<div class="sidenav-content">
-		<h1>Proposal Initiation</h1>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="form-group" title="All A and above cases are Platinum Case">
-					<select class="elementRequired form-control-select" id="platCase" type="text" datatype="String" fieldtype="Text" columnname="PLATINUMC" onblur="this.setAttribute('value', this.value);" onclick="this.setAttribute('value', this.value);" value="YES" title="All A and above cases are Platinum Case">
-					<option value="" disabled="" selected=""></option>
-					<option value="YES">Yes</option>
-					<option value="NO">No</option>
-					</select><span class="help-block help" style="display:inline-block"></span>
-					<label>Platinum Case</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<select class="elementRequired form-control-select" type="text" id="BUSINESSGROUP" datatype="String" fieldtype="Text" columnname="BUSINESSGROUP" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value="CBG"><option value="" selected="" disabled=""></option><option value="CBG">CBG</option><option value="LCG">LCG</option><option value="SRSG">SRSG</option><option value="SMEAG">SMEAG</option><option value="GCG">GCG</option><option value="IBG">IBG</option><option value="MNC">MNC</option><option value="PMG">PMG</option><option value="PSU">PSU</option><option value="SFG">SFG</option></select><span class="help-block help" style="display:inline-block"></span>
-					<label>Business Group</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<select class="elementRequired form-control-select" type="text" id="ZONE" datatype="String" fieldtype="Text" columnname="ZONE" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value=""></select><span class="help-block help" style="display:inline-block"></span>
-					<label>Zone</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<input class="elementRequired form-control" type="text" placeholder=" " id="DZM" datatype="String" fieldtype="Text" columnname="DZM"><span class="help-block help" style="display:inline-block"></span>
-					<label>DZM</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<input class="elementRequired form-control" type="text" placeholder=" " id="DZM" datatype="String" fieldtype="Text" columnname="DZM"><span class="help-block help" style="display:inline-block"></span>
-					<label>DZM</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<input class="elementRequired form-control" type="text" placeholder=" " id="ZH" datatype="String" fieldtype="Text" columnname="ZH"><span class="help-block help" style="display:inline-block"></span>
-					<label>ZH</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<select class="elementRequired  form-control-select" type="text" datatype="String" fieldtype="Text" columnname="PROPOSALTYPE" id="propType" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value="Pre Sanction Note">
-						<option value="" disabled="" selected=""></option>
-						<option value="Pre Sanction Note">Pre Sanction Note</option>
-						<option value="Post Sanction Note">Post Sanction Note</option>
-					</select><span class="help-block help" style="display:inline-block"></span>
-					<label>Type of Proposal</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<select class="elementRequired form-control-select" type="text" id="typeSanc" datatype="String" fieldtype="Text" columnname="SANCTIONTYPE" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value="Fresh Proposal"><option value=""></option><option value="Fresh Proposal" actualvalue="Fresh Proposal">Fresh Proposal</option><option value="Renewal of existing limits with better terms to borrower" actualvalue="Renewal of existing limits with better terms to borrower">Renewal of existing limits with better terms to borrower</option><option value="Renewal with no change in overall limits and on same terms but with change in inter changeability amongst the limits" actualvalue="Renewal with no change in overall limits and on same terms but with change in inter changeability amongst the limits">Renewal with no change in overall limits and on same terms but with change in inter changeability amongst the limits</option><option value="Renewal with reduction in limits with better terms or no change in terms" actualvalue="Renewal with reduction in limits with better terms or no change in terms">Renewal with reduction in limits with better terms or no change in terms</option><option value="Renewal of existing limits with adverse terms to borrower" actualvalue="Renewal of existing limits with adverse terms to borrower">Renewal of existing limits with adverse terms to borrower</option><option value="Renewal with no change in overall limits but on adverse terms with change in inter changeability amongst the limits" actualvalue="Renewal with no change in overall limits but on adverse terms with change in inter changeability amongst the limits">Renewal with no change in overall limits but on adverse terms with change in inter changeability amongst the limits</option><option value="Renewal with reduction in limits with adverse terms to borrower" actualvalue="Renewal with reduction in limits with adverse terms to borrower">Renewal with reduction in limits with adverse terms to borrower</option><option value="Renewal with enhancement of limits on same or better terms" actualvalue="Renewal with enhancement of limits on same or better terms">Renewal with enhancement of limits on same or better terms</option><option value="Renewal with enhancement of limits on adverse terms" actualvalue="Renewal with enhancement of limits on adverse terms">Renewal with enhancement of limits on adverse terms</option><option value="Fresh Proposal - Facility backed by SBLC/BG" actualvalue="Fresh Proposal - Facility backed by SBLC/BG">Fresh Proposal - Facility backed by SBLC/BG</option><option value="Fresh Proposal - Facility backed by FD" actualvalue="Fresh Proposal - Facility backed by FD">Fresh Proposal - Facility backed by FD</option><option value="Fresh Proposal - Facility backed by LCBD" actualvalue="Fresh Proposal - Facility backed by LCBD">Fresh Proposal - Facility backed by LCBD</option><option value="Fresh Sanction" actualvalue="Fresh Sanction">Fresh Sanction</option><option value="Renewal Proposal - Facility backed by SBLC/BG" actualvalue="Renewal Proposal - Facility backed by SBLC/BG">Renewal Proposal - Facility backed by SBLC/BG</option><option value="Renewal Proposal - Facility backed by FD" actualvalue="Renewal Proposal - Facility backed by FD">Renewal Proposal - Facility backed by FD</option><option value="Renewal Proposal - Facility backed by LCBD" actualvalue="Renewal Proposal - Facility backed by LCBD">Renewal Proposal - Facility backed by LCBD</option><option value="Renewal of existing limits with no change in terms" actualvalue="Renewal of existing limits with no change in terms">Renewal of existing limits with no change in terms</option></select><span class="help-block help" style="display:inline-block"></span>
-					<label>Type of Sanction</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<select class="elementRequired  form-control-select" id="currMs" type="text" datatype="String" fieldtype="Text" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value="INR" columnname="CURRENCY">
-					<option value=""></option><option value="INR">INR</option><option value="USD">USD</option><option value="AED" actualvalue="AED">AED</option><option value="ANG" actualvalue="ANG">ANG</option><option value="ARS" actualvalue="ARS">ARS</option><option value="AUD" actualvalue="AUD">AUD</option><option value="BBD" actualvalue="BBD">BBD</option><option value="BDT" actualvalue="BDT">BDT</option><option value="BGN" actualvalue="BGN">BGN</option><option value="BHD" actualvalue="BHD">BHD</option><option value="BMD" actualvalue="BMD">BMD</option><option value="BND" actualvalue="BND">BND</option><option value="BR1" actualvalue="BR1">BR1</option><option value="BR2" actualvalue="BR2">BR2</option><option value="BR3" actualvalue="BR3">BR3</option><option value="BRL" actualvalue="BRL">BRL</option><option value="BSD" actualvalue="BSD">BSD</option><option value="BWP" actualvalue="BWP">BWP</option><option value="CAD" actualvalue="CAD">CAD</option><option value="CHF" actualvalue="CHF">CHF</option><option value="CLP" actualvalue="CLP">CLP</option><option value="CNH" actualvalue="CNH">CNH</option><option value="CNY" actualvalue="CNY">CNY</option><option value="COP" actualvalue="COP">COP</option><option value="CRC" actualvalue="CRC">CRC</option><option value="CYP" actualvalue="CYP">CYP</option><option value="CZK" actualvalue="CZK">CZK</option><option value="DKK" actualvalue="DKK">DKK</option><option value="DOP" actualvalue="DOP">DOP</option><option value="DZD" actualvalue="DZD">DZD</option><option value="EEK" actualvalue="EEK">EEK</option><option value="EGP" actualvalue="EGP">EGP</option><option value="EUR" actualvalue="EUR">EUR</option><option value="GBP" actualvalue="GBP">GBP</option><option value="GEL" actualvalue="GEL">GEL</option><option value="GHS" actualvalue="GHS">GHS</option><option value="GTQ" actualvalue="GTQ">GTQ</option><option value="HKD" actualvalue="HKD">HKD</option><option value="HRK" actualvalue="HRK">HRK</option><option value="HUF" actualvalue="HUF">HUF</option><option value="IDR" actualvalue="IDR">IDR</option><option value="ILS" actualvalue="ILS">ILS</option><option value="IQD" actualvalue="IQD">IQD</option><option value="IRR" actualvalue="IRR">IRR</option><option value="ISK" actualvalue="ISK">ISK</option><option value="JMD" actualvalue="JMD">JMD</option><option value="JOD" actualvalue="JOD">JOD</option><option value="JPY" actualvalue="JPY">JPY</option><option value="KES" actualvalue="KES">KES</option><option value="KHR" actualvalue="KHR">KHR</option><option value="KRW" actualvalue="KRW">KRW</option><option value="KWD" actualvalue="KWD">KWD</option><option value="KYD" actualvalue="KYD">KYD</option><option value="KZT" actualvalue="KZT">KZT</option><option value="LBP" actualvalue="LBP">LBP</option><option value="LKR" actualvalue="LKR">LKR</option><option value="LRD" actualvalue="LRD">LRD</option><option value="LTL" actualvalue="LTL">LTL</option><option value="LVL" actualvalue="LVL">LVL</option><option value="LYD" actualvalue="LYD">LYD</option><option value="MAD" actualvalue="MAD">MAD</option><option value="MKD" actualvalue="MKD">MKD</option><option value="MUR" actualvalue="MUR">MUR</option><option value="MWK" actualvalue="MWK">MWK</option><option value="MXN" actualvalue="MXN">MXN</option><option value="MYR" actualvalue="MYR">MYR</option><option value="NAD" actualvalue="NAD">NAD</option><option value="NGN" actualvalue="NGN">NGN</option><option value="NOK" actualvalue="NOK">NOK</option><option value="NPR" actualvalue="NPR">NPR</option><option value="NZD" actualvalue="NZD">NZD</option><option value="OMR" actualvalue="OMR">OMR</option><option value="PAB" actualvalue="PAB">PAB</option><option value="PEN" actualvalue="PEN">PEN</option><option value="PGK" actualvalue="PGK">PGK</option><option value="PHP" actualvalue="PHP">PHP</option><option value="PKR" actualvalue="PKR">PKR</option><option value="PLN" actualvalue="PLN">PLN</option><option value="QAR" actualvalue="QAR">QAR</option><option value="RON" actualvalue="RON">RON</option><option value="RSD" actualvalue="RSD">RSD</option><option value="RUB" actualvalue="RUB">RUB</option><option value="SAR" actualvalue="SAR">SAR</option><option value="SBD" actualvalue="SBD">SBD</option><option value="SCR" actualvalue="SCR">SCR</option><option value="SDG" actualvalue="SDG">SDG</option><option value="SEK" actualvalue="SEK">SEK</option><option value="SGD" actualvalue="SGD">SGD</option><option value="SIT" actualvalue="SIT">SIT</option><option value="SKK" actualvalue="SKK">SKK</option><option value="SLL" actualvalue="SLL">SLL</option><option value="SOS" actualvalue="SOS">SOS</option><option value="SVC" actualvalue="SVC">SVC</option><option value="SYP" actualvalue="SYP">SYP</option><option value="SZL" actualvalue="SZL">SZL</option><option value="THB" actualvalue="THB">THB</option><option value="TND" actualvalue="TND">TND</option><option value="TOP" actualvalue="TOP">TOP</option><option value="TRY" actualvalue="TRY">TRY</option><option value="TTD" actualvalue="TTD">TTD</option><option value="TWD" actualvalue="TWD">TWD</option><option value="TZS" actualvalue="TZS">TZS</option><option value="UAH" actualvalue="UAH">UAH</option><option value="UDI" actualvalue="UDI">UDI</option><option value="UGX" actualvalue="UGX">UGX</option><option value="UYU" actualvalue="UYU">UYU</option><option value="VEF" actualvalue="VEF">VEF</option><option value="VND" actualvalue="VND">VND</option><option value="VUV" actualvalue="VUV">VUV</option><option value="WST" actualvalue="WST">WST</option><option value="XAF" actualvalue="XAF">XAF</option><option value="XAG" actualvalue="XAG">XAG</option><option value="XAU" actualvalue="XAU">XAU</option><option value="XOF" actualvalue="XOF">XOF</option><option value="XPF" actualvalue="XPF">XPF</option><option value="XPT" actualvalue="XPT">XPT</option><option value="YER" actualvalue="YER">YER</option><option value="ZAR" actualvalue="ZAR">ZAR</option><option value="ZMK" actualvalue="ZMK">ZMK</option><option value="Not Applicable" actualvalue="Not Applicable">Not Applicable</option><option value="Others" actualvalue="Others">Others</option></select><span class="help-block help" style="display:inline-block"></span>
-					<label>Currency</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="form-group">
-					<select class="elementRequired  form-control-select changed" id="denom" type="text" datatype="String" fieldtype="Text" columnname="DENOMINATION" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value=""><option value=""></option><option value="Million">Million</option><option value="Billion">Billion</option><option value="Unit" actualvalue="Unit">Unit</option><option value="Hundreds" actualvalue="Hundreds">Hundreds</option><option value="Thousand" actualvalue="Thousand">Thousand</option><option value="Lakhs" actualvalue="Lakhs">Lakhs</option><option value="Crores" actualvalue="Crores">Crores</option><option value="Trillion" actualvalue="Trillion">Trillion</option></select><span class="help-block help" style="display:inline-block"></span>
-					<label>Denomination</label>
-				</div>
-			</div>
-			
-		</div>
+	<head>
+		<title>ICICI Credit Origination System - ICICI BANK</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="keywords" content="ICICI Bank | Channel Finance Online">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/fixedHeader.bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive.bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 		
-	</div>
-</div>
-<span class="left-slide-icon" onclick="openNav()">&#10150;</span>
-
-<!--Left Side Slide End-->
-<!--Header Start-->
-<header>
-	<div class="container-fluid">
-        <!--header 1-->
-        <div class="row" id="header_toolbar">
-            <div class="col-md-6 col-sm-12 hidden-xs">
-                <div id="PROCESSINSTANCEID_TEXT" class="unique-id">Corporate_Loan_Origination_System - CLOS-000000000000000000101</div>
-            </div>
-            <div class="col-md-6 col-sm-12 text-right">
-				<div class="toolmenu"><button class="sdc">Upload</button></div>
-				<div class="toolmenu"><button class="sdc">Save</button></div>
-				<div class="toolmenu"><button class="sdc">Submit</button></div>
-				<div class="toolmenu"><button class="sdc">Close</button></div>
-				<div class="toolmenu"><button class="sdc">Audit</button></div>
-            </div>
-        </div>
-        <!--heaader 2-->
-        <div class="row header-2 no-gutter">
-            <div class="col-md-6">
-                <div class="logo"><img src="images/logo.png" alt="ICICI CFO" /></div>
-            </div>
-            <div class="col-md-6 text-right">
-            	<div class="project-title hidden-xs">ICICI Credit Origination System</div>
-				<div class="project-subtitle hidden-xs">Working Business Group</div>
-            </div>
-        </div>
-	</div>
-</header>
-<!--Header End-->
-<div id="">
-<!--Main Container-->
-<main id="main">
-	<div class="content-container">
-		<div class="container-fluid">
-        	<!--Tab Container Start-->
-			<section id="fancyTabWidget" class="tabs t-tabs">
-				<ul class="nav nav-tabs fancyTabs" role="tablist">
-					<li class="tab fancyTab active">
-					<div class="arrow-down"><div class="arrow-down-inner"></div></div>	
-						<a id="tab0" href="#tabBody0" role="tab" aria-controls="tabBody0" aria-selected="true" data-toggle="tab" tabindex="0"><span>Proposal</span></a>
-						<div class="whiteBlock"></div>
-					</li>
-					
-					<li class="tab fancyTab">
-					<div class="arrow-down"><div class="arrow-down-inner"></div></div>
-						<a id="tab1" href="#tabBody1" role="tab" aria-controls="tabBody1" aria-selected="true" data-toggle="tab" tabindex="0"><span>Rating Rational</span></a>
-						<div class="whiteBlock"></div>
-					</li>
-					
-					<li class="tab fancyTab">
-					<div class="arrow-down"><div class="arrow-down-inner"></div></div>
-						
-						<a id="tab2" href="#tabBody2" role="tab" aria-controls="tabBody2" aria-selected="true" data-toggle="tab" tabindex="0"><span>Executive Summary</span></a>
-						<div class="whiteBlock"></div>
-					</li>
-					
-					<li class="tab fancyTab">
-					<div class="arrow-down"><div class="arrow-down-inner"></div></div>
-						<!-- <a id="tab3" href="#tabBody3" role="tab" aria-controls="tabBody3" aria-selected="true" data-toggle="tab" tabindex="0"><span>PART C</span></a> -->
-						<a href="#myModal" role="tab" tabindex="0" data-toggle="modal" data-target="#myModal"><span>PART D</span></a>
-						<div class="whiteBlock"></div>
-					</li>
-				</ul>
-				<div id="myTabContent" class="tab-content fancyTabContent" aria-live="polite">
-					<div class="tab-pane active in" id="tabBody0" role="tabpanel" aria-labelledby="tab0" aria-hidden="false" tabindex="0">
-						<div class="row">
-							<div class="col-md-12">
-								<!--Data Table Start-->
-								<table class="table table-bordered nowrap table-1" style="width:100%">
-									<thead>
-										<tr>
-											<th width="80px">Sr. No.</th>
-											<th>Section</th>
-											<th>Status</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1.</td>
-											<td>
-												<div class="sub-link section-text" onclick="script.showSubSections(this);">Annexure II A: Declaration on Capital Market exposure</div>
-												<div class="sub-link-div" hidden>
-													<ul>
-														<li onclick="window.location.href='index.html';">Index Page</li>
-														<li onclick="window.location.href='assistant-details.html';">Assistant Detail</li>
-														<li onclick="window.location.href='proposal-initiation.html';">Proposal Initiation</li>
-													</ul>
-												</div>
-											</td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>2.</td>
-											<td>
-												<div class="sub-link section-text" onclick="script.showSubSections(this);">Annexure II A: Declaration on Capital Market exposure</div>
-												<div class="sub-link-div" hidden>
-													<ul class="list-group">
-														<li>Link one</li>
-														<li>Link one</li>
-														<li>Link one</li>
-														<li>Link one</li>
-														<li>Link one</li>
-													</ul>
-												</div>
-											</td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>3.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>4.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>5.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>6.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>7.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>8.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>9.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>10.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>11.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-										<tr>
-											<td>12.</td>
-											<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
-											<td><span class="glyphicon glyphicon-check text-success"></span></td>
-										</tr>
-									</tbody>
-								</table>
-								<!--Data Table End-->
-							</div>
+		<!--SCRIPT JS-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="js/dataTables.fixedHeader.js"></script>
+		<script type="text/javascript" src="js/dataTables.responsive.js"></script>
+		<script type="text/javascript" src="js/responsive.bootstrap.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<!-- //Head -->
+	<!-- Body -->
+	<body>
+		<!--Loader Start-->
+		<div class="loading" hidden>
+			<div class="mask"></div>
+			<div class="cssload-loader"><span class="cssload-loader-inner"></span></div>
+			<div class="processRequest">Processing your request</div>
+		</div>
+		<!--Loader End-->
+		<!--Left Side Slide Start-->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="sidenav-content">
+				<h1>Proposal Initiation</h1>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="form-group" title="All A and above cases are Platinum Case">
+							<select class="elementRequired form-control-select" id="platCase" type="text" datatype="String" fieldtype="Text" columnname="PLATINUMC" onblur="this.setAttribute('value', this.value);" onclick="this.setAttribute('value', this.value);" value="YES" title="All A and above cases are Platinum Case">
+								<option value="" disabled="" selected=""></option>
+								<option value="YES">Yes</option>
+								<option value="NO">No</option>
+							</select><span class="help-block help" style="display:inline-block"></span>
+							<label>Platinum Case</label>
 						</div>
 					</div>
-					<div class="tab-pane  fade" id="tabBody1" role="tabpanel" aria-labelledby="tab1" aria-hidden="true" tabindex="0">
-							<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<select class="form-control-select" id='facTypeSel'  onclick="this.setAttribute('value', this.value);" value="" required="">
-									<option value=""></option>
-									<option value='Fund Based'>Fund Based</option>
-									<option value='Non Fund Based'>Non Fund Based</option>
-									<option value='Equity Linked'>Equity Linked</option>
-									<option value='Credit Derivatives'>Credit Derivatives</option>
-								</select>
-								<label>Company Name</label>
-							</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<select class="elementRequired form-control-select" type="text" id="BUSINESSGROUP" datatype="String" fieldtype="Text" columnname="BUSINESSGROUP" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value="CBG"><option value="" selected="" disabled=""></option><option value="CBG">CBG</option><option value="LCG">LCG</option><option value="SRSG">SRSG</option><option value="SMEAG">SMEAG</option><option value="GCG">GCG</option><option value="IBG">IBG</option><option value="MNC">MNC</option><option value="PMG">PMG</option><option value="PSU">PSU</option><option value="SFG">SFG</option></select><span class="help-block help" style="display:inline-block"></span>
+							<label>Business Group</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<input type="text" class="form-control" required placeholder=" ">
-								<label>UCC</label>
-							</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<select class="elementRequired form-control-select" type="text" id="ZONE" datatype="String" fieldtype="Text" columnname="ZONE" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value=""></select><span class="help-block help" style="display:inline-block"></span>
+							<label>Zone</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
-									<option value=""></option>
-									<option value='Derivatives'>Derivatives</option>
-								</select>
-								<label>Platinuum Case</label>
-							</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<input class="elementRequired form-control" type="text" placeholder=" " id="DZM" datatype="String" fieldtype="Text" columnname="DZM"><span class="help-block help" style="display:inline-block"></span>
+							<label>DZM</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<input type="text" class="form-control" required placeholder=" ">
-								<label>Business Group</label>
-							</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<input class="elementRequired form-control" type="text" placeholder=" " id="DZM" datatype="String" fieldtype="Text" columnname="DZM"><span class="help-block help" style="display:inline-block"></span>
+							<label>DZM</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<input type="text" class="form-control" required placeholder=" ">
-								<label>Zone</label>
-							</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<input class="elementRequired form-control" type="text" placeholder=" " id="ZH" datatype="String" fieldtype="Text" columnname="ZH"><span class="help-block help" style="display:inline-block"></span>
+							<label>ZH</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<input type="text" class="form-control" required placeholder=" ">
-								<label>DZM</label>
-							</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<select class="elementRequired  form-control-select" type="text" datatype="String" fieldtype="Text" columnname="PROPOSALTYPE" id="propType" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value="Pre Sanction Note">
+								<option value="" disabled="" selected=""></option>
+								<option value="Pre Sanction Note">Pre Sanction Note</option>
+								<option value="Post Sanction Note">Post Sanction Note</option>
+							</select><span class="help-block help" style="display:inline-block"></span>
+							<label>Type of Proposal</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<input type="text" class="form-control" required placeholder=" ">
-								<label>ZH</label>
-							</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<select class="elementRequired form-control-select" type="text" id="typeSanc" datatype="String" fieldtype="Text" columnname="SANCTIONTYPE" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value="Fresh Proposal"><option value=""></option><option value="Fresh Proposal" actualvalue="Fresh Proposal">Fresh Proposal</option><option value="Renewal of existing limits with better terms to borrower" actualvalue="Renewal of existing limits with better terms to borrower">Renewal of existing limits with better terms to borrower</option><option value="Renewal with no change in overall limits and on same terms but with change in inter changeability amongst the limits" actualvalue="Renewal with no change in overall limits and on same terms but with change in inter changeability amongst the limits">Renewal with no change in overall limits and on same terms but with change in inter changeability amongst the limits</option><option value="Renewal with reduction in limits with better terms or no change in terms" actualvalue="Renewal with reduction in limits with better terms or no change in terms">Renewal with reduction in limits with better terms or no change in terms</option><option value="Renewal of existing limits with adverse terms to borrower" actualvalue="Renewal of existing limits with adverse terms to borrower">Renewal of existing limits with adverse terms to borrower</option><option value="Renewal with no change in overall limits but on adverse terms with change in inter changeability amongst the limits" actualvalue="Renewal with no change in overall limits but on adverse terms with change in inter changeability amongst the limits">Renewal with no change in overall limits but on adverse terms with change in inter changeability amongst the limits</option><option value="Renewal with reduction in limits with adverse terms to borrower" actualvalue="Renewal with reduction in limits with adverse terms to borrower">Renewal with reduction in limits with adverse terms to borrower</option><option value="Renewal with enhancement of limits on same or better terms" actualvalue="Renewal with enhancement of limits on same or better terms">Renewal with enhancement of limits on same or better terms</option><option value="Renewal with enhancement of limits on adverse terms" actualvalue="Renewal with enhancement of limits on adverse terms">Renewal with enhancement of limits on adverse terms</option><option value="Fresh Proposal - Facility backed by SBLC/BG" actualvalue="Fresh Proposal - Facility backed by SBLC/BG">Fresh Proposal - Facility backed by SBLC/BG</option><option value="Fresh Proposal - Facility backed by FD" actualvalue="Fresh Proposal - Facility backed by FD">Fresh Proposal - Facility backed by FD</option><option value="Fresh Proposal - Facility backed by LCBD" actualvalue="Fresh Proposal - Facility backed by LCBD">Fresh Proposal - Facility backed by LCBD</option><option value="Fresh Sanction" actualvalue="Fresh Sanction">Fresh Sanction</option><option value="Renewal Proposal - Facility backed by SBLC/BG" actualvalue="Renewal Proposal - Facility backed by SBLC/BG">Renewal Proposal - Facility backed by SBLC/BG</option><option value="Renewal Proposal - Facility backed by FD" actualvalue="Renewal Proposal - Facility backed by FD">Renewal Proposal - Facility backed by FD</option><option value="Renewal Proposal - Facility backed by LCBD" actualvalue="Renewal Proposal - Facility backed by LCBD">Renewal Proposal - Facility backed by LCBD</option><option value="Renewal of existing limits with no change in terms" actualvalue="Renewal of existing limits with no change in terms">Renewal of existing limits with no change in terms</option></select><span class="help-block help" style="display:inline-block"></span>
+							<label>Type of Sanction</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
-									<option value=""></option>
-									<option value='Derivatives'>Derivatives</option>
-								</select>
-								<label>Type of Proposal</label>
-							</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<select class="elementRequired  form-control-select" id="currMs" type="text" datatype="String" fieldtype="Text" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value="INR" columnname="CURRENCY">
+							<option value=""></option><option value="INR">INR</option><option value="USD">USD</option><option value="AED" actualvalue="AED">AED</option><option value="ANG" actualvalue="ANG">ANG</option><option value="ARS" actualvalue="ARS">ARS</option><option value="AUD" actualvalue="AUD">AUD</option><option value="BBD" actualvalue="BBD">BBD</option><option value="BDT" actualvalue="BDT">BDT</option><option value="BGN" actualvalue="BGN">BGN</option><option value="BHD" actualvalue="BHD">BHD</option><option value="BMD" actualvalue="BMD">BMD</option><option value="BND" actualvalue="BND">BND</option><option value="BR1" actualvalue="BR1">BR1</option><option value="BR2" actualvalue="BR2">BR2</option><option value="BR3" actualvalue="BR3">BR3</option><option value="BRL" actualvalue="BRL">BRL</option><option value="BSD" actualvalue="BSD">BSD</option><option value="BWP" actualvalue="BWP">BWP</option><option value="CAD" actualvalue="CAD">CAD</option><option value="CHF" actualvalue="CHF">CHF</option><option value="CLP" actualvalue="CLP">CLP</option><option value="CNH" actualvalue="CNH">CNH</option><option value="CNY" actualvalue="CNY">CNY</option><option value="COP" actualvalue="COP">COP</option><option value="CRC" actualvalue="CRC">CRC</option><option value="CYP" actualvalue="CYP">CYP</option><option value="CZK" actualvalue="CZK">CZK</option><option value="DKK" actualvalue="DKK">DKK</option><option value="DOP" actualvalue="DOP">DOP</option><option value="DZD" actualvalue="DZD">DZD</option><option value="EEK" actualvalue="EEK">EEK</option><option value="EGP" actualvalue="EGP">EGP</option><option value="EUR" actualvalue="EUR">EUR</option><option value="GBP" actualvalue="GBP">GBP</option><option value="GEL" actualvalue="GEL">GEL</option><option value="GHS" actualvalue="GHS">GHS</option><option value="GTQ" actualvalue="GTQ">GTQ</option><option value="HKD" actualvalue="HKD">HKD</option><option value="HRK" actualvalue="HRK">HRK</option><option value="HUF" actualvalue="HUF">HUF</option><option value="IDR" actualvalue="IDR">IDR</option><option value="ILS" actualvalue="ILS">ILS</option><option value="IQD" actualvalue="IQD">IQD</option><option value="IRR" actualvalue="IRR">IRR</option><option value="ISK" actualvalue="ISK">ISK</option><option value="JMD" actualvalue="JMD">JMD</option><option value="JOD" actualvalue="JOD">JOD</option><option value="JPY" actualvalue="JPY">JPY</option><option value="KES" actualvalue="KES">KES</option><option value="KHR" actualvalue="KHR">KHR</option><option value="KRW" actualvalue="KRW">KRW</option><option value="KWD" actualvalue="KWD">KWD</option><option value="KYD" actualvalue="KYD">KYD</option><option value="KZT" actualvalue="KZT">KZT</option><option value="LBP" actualvalue="LBP">LBP</option><option value="LKR" actualvalue="LKR">LKR</option><option value="LRD" actualvalue="LRD">LRD</option><option value="LTL" actualvalue="LTL">LTL</option><option value="LVL" actualvalue="LVL">LVL</option><option value="LYD" actualvalue="LYD">LYD</option><option value="MAD" actualvalue="MAD">MAD</option><option value="MKD" actualvalue="MKD">MKD</option><option value="MUR" actualvalue="MUR">MUR</option><option value="MWK" actualvalue="MWK">MWK</option><option value="MXN" actualvalue="MXN">MXN</option><option value="MYR" actualvalue="MYR">MYR</option><option value="NAD" actualvalue="NAD">NAD</option><option value="NGN" actualvalue="NGN">NGN</option><option value="NOK" actualvalue="NOK">NOK</option><option value="NPR" actualvalue="NPR">NPR</option><option value="NZD" actualvalue="NZD">NZD</option><option value="OMR" actualvalue="OMR">OMR</option><option value="PAB" actualvalue="PAB">PAB</option><option value="PEN" actualvalue="PEN">PEN</option><option value="PGK" actualvalue="PGK">PGK</option><option value="PHP" actualvalue="PHP">PHP</option><option value="PKR" actualvalue="PKR">PKR</option><option value="PLN" actualvalue="PLN">PLN</option><option value="QAR" actualvalue="QAR">QAR</option><option value="RON" actualvalue="RON">RON</option><option value="RSD" actualvalue="RSD">RSD</option><option value="RUB" actualvalue="RUB">RUB</option><option value="SAR" actualvalue="SAR">SAR</option><option value="SBD" actualvalue="SBD">SBD</option><option value="SCR" actualvalue="SCR">SCR</option><option value="SDG" actualvalue="SDG">SDG</option><option value="SEK" actualvalue="SEK">SEK</option><option value="SGD" actualvalue="SGD">SGD</option><option value="SIT" actualvalue="SIT">SIT</option><option value="SKK" actualvalue="SKK">SKK</option><option value="SLL" actualvalue="SLL">SLL</option><option value="SOS" actualvalue="SOS">SOS</option><option value="SVC" actualvalue="SVC">SVC</option><option value="SYP" actualvalue="SYP">SYP</option><option value="SZL" actualvalue="SZL">SZL</option><option value="THB" actualvalue="THB">THB</option><option value="TND" actualvalue="TND">TND</option><option value="TOP" actualvalue="TOP">TOP</option><option value="TRY" actualvalue="TRY">TRY</option><option value="TTD" actualvalue="TTD">TTD</option><option value="TWD" actualvalue="TWD">TWD</option><option value="TZS" actualvalue="TZS">TZS</option><option value="UAH" actualvalue="UAH">UAH</option><option value="UDI" actualvalue="UDI">UDI</option><option value="UGX" actualvalue="UGX">UGX</option><option value="UYU" actualvalue="UYU">UYU</option><option value="VEF" actualvalue="VEF">VEF</option><option value="VND" actualvalue="VND">VND</option><option value="VUV" actualvalue="VUV">VUV</option><option value="WST" actualvalue="WST">WST</option><option value="XAF" actualvalue="XAF">XAF</option><option value="XAG" actualvalue="XAG">XAG</option><option value="XAU" actualvalue="XAU">XAU</option><option value="XOF" actualvalue="XOF">XOF</option><option value="XPF" actualvalue="XPF">XPF</option><option value="XPT" actualvalue="XPT">XPT</option><option value="YER" actualvalue="YER">YER</option><option value="ZAR" actualvalue="ZAR">ZAR</option><option value="ZMK" actualvalue="ZMK">ZMK</option><option value="Not Applicable" actualvalue="Not Applicable">Not Applicable</option><option value="Others" actualvalue="Others">Others</option></select><span class="help-block help" style="display:inline-block"></span>
+							<label>Currency</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
-									<option value=""></option>
-									<option value='Derivatives'>Derivatives</option>
-								</select>
-								<label>Type of Sanction</label>
-							</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<select class="elementRequired  form-control-select changed" id="denom" type="text" datatype="String" fieldtype="Text" columnname="DENOMINATION" onclick="this.setAttribute('value', this.value);" onblur="this.setAttribute('value', this.value);" value=""><option value=""></option><option value="Million">Million</option><option value="Billion">Billion</option><option value="Unit" actualvalue="Unit">Unit</option><option value="Hundreds" actualvalue="Hundreds">Hundreds</option><option value="Thousand" actualvalue="Thousand">Thousand</option><option value="Lakhs" actualvalue="Lakhs">Lakhs</option><option value="Crores" actualvalue="Crores">Crores</option><option value="Trillion" actualvalue="Trillion">Trillion</option></select><span class="help-block help" style="display:inline-block"></span>
+							<label>Denomination</label>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
-									<option value=""></option>
-									<option value='Derivatives'>Derivatives</option>
-								</select>
-								<label>Currency</label>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="form-group">
-								<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
-									<option value=""></option>
-									<option value='Derivatives'>Derivatives</option>
-								</select>
-								<label>Denomination</label>
-							</div>
-						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		<span class="left-slide-icon" onclick="openNav()">&#10150;</span>
+		
+		<!--Left Side Slide End-->
+		<!--Header Start-->
+		<header>
+			<div class="container-fluid">
+				<!--header 1-->
+				<div class="row" id="header_toolbar">
+					<div class="col-md-6 col-sm-12 hidden-xs">
+						<div id="PROCESSINSTANCEID_TEXT" class="unique-id">Corporate_Loan_Origination_System - CLOS-000000000000000000101</div>
+					</div>
+					<div class="col-md-6 col-sm-12 text-right">
+						<div class="toolmenu"><button class="sdc">Upload</button></div>
+						<div class="toolmenu"><button class="sdc">Save</button></div>
+						<div class="toolmenu"><button class="sdc">Submit</button></div>
+						<div class="toolmenu"><button class="sdc">Close</button></div>
+						<div class="toolmenu"><button class="sdc">Audit</button></div>
 					</div>
 				</div>
+				<!--heaader 2-->
+				<div class="row header-2 no-gutter">
+					<div class="col-md-6">
+						<div class="logo"><img src="images/logo.png" alt="ICICI CFO" /></div>
+					</div>
+					<div class="col-md-6 text-right">
+						<div class="project-title hidden-xs">ICICI Credit Origination System</div>
+						<div class="project-subtitle hidden-xs">Working Business Group</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--Header End-->
+		<div id="">
+			<!--Main Container-->
+			<main id="main">
+				<div class="content-container">
+					<div class="container-fluid">
+						<!--Tab Container Start-->
+						<section id="fancyTabWidget" class="tabs t-tabs">
+							<ul class="nav nav-tabs fancyTabs" role="tablist">
+								<li class="tab fancyTab active">
+									<div class="arrow-down"><div class="arrow-down-inner"></div></div>	
+									<a id="tab0" href="#tabBody0" role="tab" aria-controls="tabBody0" aria-selected="true" data-toggle="tab" tabindex="0"><span>Proposal</span></a>
+									<div class="whiteBlock"></div>
+								</li>
+								
+								<li class="tab fancyTab">
+									<div class="arrow-down"><div class="arrow-down-inner"></div></div>
+									<a id="tab1" href="#tabBody1" role="tab" aria-controls="tabBody1" aria-selected="true" data-toggle="tab" tabindex="0"><span>Rating Rational</span></a>
+									<div class="whiteBlock"></div>
+								</li>
+								
+								<li class="tab fancyTab">
+									<div class="arrow-down"><div class="arrow-down-inner"></div></div>
+									
+									<a id="tab2" href="#tabBody2" role="tab" aria-controls="tabBody2" aria-selected="true" data-toggle="tab" tabindex="0"><span>Executive Summary</span></a>
+									<div class="whiteBlock"></div>
+								</li>
+								
+								<li class="tab fancyTab">
+									<div class="arrow-down"><div class="arrow-down-inner"></div></div>
+									<!-- <a id="tab3" href="#tabBody3" role="tab" aria-controls="tabBody3" aria-selected="true" data-toggle="tab" tabindex="0"><span>PART C</span></a> -->
+									<a href="#myModal" role="tab" tabindex="0" data-toggle="modal" data-target="#myModal"><span>PART D</span></a>
+									<div class="whiteBlock"></div>
+								</li>
+							</ul>
+							<div id="myTabContent" class="tab-content fancyTabContent" aria-live="polite">
+								<div class="tab-pane active in" id="tabBody0" role="tabpanel" aria-labelledby="tab0" aria-hidden="false" tabindex="0">
+									<div class="row">
+										<div class="col-md-12">
+											<!--Data Table Start-->
+											<table class="table table-bordered nowrap table-1" style="width:100%">
+												<thead>
+													<tr>
+														<th width="80px">Sr. No.</th>
+														<th>Section</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1.</td>
+														<td>
+															<div class="sub-link section-text" onclick="script.showSubSections(this);">Annexure II A: Declaration on Capital Market exposure</div>
+															<div class="sub-link-div" hidden>
+																<ul>
+																	<li onclick="window.location.href='index.html';">Index Page</li>
+																	<li onclick="window.location.href='assistant-details.html';">Assistant Detail</li>
+																	<li onclick="window.location.href='proposal-initiation.html';">Proposal Initiation</li>
+																	<li onclick="window.location.href='business-snapshot.html';">Business Snapshot</li>
+																</ul>
+															</div>
+														</td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>2.</td>
+														<td>
+															<div class="sub-link section-text" onclick="script.showSubSections(this);">Annexure II A: Declaration on Capital Market exposure</div>
+															<div class="sub-link-div" hidden>
+																<ul class="list-group">
+																	<li>Link one</li>
+																	<li>Link one</li>
+																	<li>Link one</li>
+																	<li>Link one</li>
+																	<li>Link one</li>
+																</ul>
+															</div>
+														</td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>3.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>4.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>5.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>6.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>7.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>8.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>9.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>10.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>11.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+													<tr>
+														<td>12.</td>
+														<td><div class="section-text">Annexure II A: Declaration on Capital Market exposure</div></td>
+														<td><span class="glyphicon glyphicon-check text-success"></span></td>
+													</tr>
+												</tbody>
+											</table>
+											<!--Data Table End-->
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane  fade" id="tabBody1" role="tabpanel" aria-labelledby="tab1" aria-hidden="true" tabindex="0">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<select class="form-control-select" id='facTypeSel'  onclick="this.setAttribute('value', this.value);" value="" required="">
+														<option value=""></option>
+														<option value='Fund Based'>Fund Based</option>
+														<option value='Non Fund Based'>Non Fund Based</option>
+														<option value='Equity Linked'>Equity Linked</option>
+														<option value='Credit Derivatives'>Credit Derivatives</option>
+													</select>
+													<label>Company Name</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<input type="text" class="form-control" required placeholder=" ">
+													<label>UCC</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
+														<option value=""></option>
+														<option value='Derivatives'>Derivatives</option>
+													</select>
+													<label>Platinuum Case</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<input type="text" class="form-control" required placeholder=" ">
+													<label>Business Group</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<input type="text" class="form-control" required placeholder=" ">
+													<label>Zone</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<input type="text" class="form-control" required placeholder=" ">
+													<label>DZM</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<input type="text" class="form-control" required placeholder=" ">
+													<label>ZH</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
+														<option value=""></option>
+														<option value='Derivatives'>Derivatives</option>
+													</select>
+													<label>Type of Proposal</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
+														<option value=""></option>
+														<option value='Derivatives'>Derivatives</option>
+													</select>
+													<label>Type of Sanction</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
+														<option value=""></option>
+														<option value='Derivatives'>Derivatives</option>
+													</select>
+													<label>Currency</label>
+												</div>
+											</div>
+											<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="form-group">
+													<select class="form-control-select" value=""  onclick="this.setAttribute('value', this.value);" required="">
+														<option value=""></option>
+														<option value='Derivatives'>Derivatives</option>
+													</select>
+													<label>Denomination</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="tab-pane  fade" id="tabBody2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" tabindex="0">
+									<div class="row">
+										<div class="col-md-12">
+											<table width="100%" class="table table-bordered" cellpadding="0" cellspacing="0">
+												<tr>
+													<td width="10%">Lead</td>
+													<td><input type="text" /></td>
+												</tr>
+												<tr>
+													<td>Proposal</td>
+													<td><textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short></textarea></td>
+												</tr>
+												<tr>
+													<td>Group</td>
+													<td><textarea spellcheck="true"></textarea></td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane  fade" id="tabBody3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true" tabindex="0">
+									<div class="row">
+										<div class="col-md-12">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!--Tab Container End-->
+					</div>
+				</div>
+			</main>
+			<!--Main Container-->
 			
-					</div>
-					<div class="tab-pane  fade" id="tabBody2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" tabindex="0">
-						<div class="row">
-							<div class="col-md-12">
-							<table width="100%" class="table table-bordered" cellpadding="0" cellspacing="0">
-							<tr>
-								<td width="10%">Lead</td>
-								<td><input type="text" /></td>
-							</tr>
-							<tr>
-								<td>Proposal</td>
-								<td><textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short></textarea></td>
-							</tr>
-							<tr>
-								<td>Group</td>
-								<td><textarea spellcheck="true"></textarea></td>
-							</tr>
-							</table>
-							</div>
+			<!-- Modal -->
+			<div id="myModal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Header</h4>
 						</div>
-					</div>
-					<div class="tab-pane  fade" id="tabBody3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true" tabindex="0">
-						<div class="row">
-							<div class="col-md-12">
-							
-							</div>
+						<div class="modal-body">
+							<p>Some text in the modal.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
-			</section>
-            <!--Tab Container End-->
-		</div>
-	</div>
-</main>
-<!--Main Container-->
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Modal Header</h4>
 			</div>
-			<div class="modal-body">
-				<p>Some text in the modal.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
-</div>
-<!--Footer Start-->
-<footer>Powered by Servosys Solutions</footer>
-<!--Footer End-->
-</body>
-<script src="ckeditor/ckeditor.js"></script>
-<script>
-CKEDITOR.replace('editor1', {uiColor: '#aad5e0'});
-CKEDITOR.config.removeButtons = 'Copy,Cut,Paste,Undo,Redo,Print,Form,TextField,Textarea,Button,SelectAll,NumberedList,BulletedList,CreateDiv,Table,PasteText,PasteFromWord,Select,HiddenField';
-CKEDITOR.instances.editor1.on('paste', function(evt) {
-    evt.cancel();
-});
-function openNav() {
-  document.getElementById("mySidenav").style.width = "25%";
-  document.getElementById("main").style.marginLeft = "25%";
-  document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("main").style.backgroundColor = "white";
-}
-
-</script>
-</html>
+			<!--Footer Start-->
+			<footer>Powered by Servosys Solutions</footer>
+			<!--Footer End-->
+		</body>
+		<script src="ckeditor/ckeditor.js"></script>
+		<script>
+			CKEDITOR.replace('editor1', {uiColor: '#aad5e0'});
+			CKEDITOR.config.removeButtons = 'Copy,Cut,Paste,Undo,Redo,Print,Form,TextField,Textarea,Button,SelectAll,NumberedList,BulletedList,CreateDiv,Table,PasteText,PasteFromWord,Select,HiddenField';
+			CKEDITOR.instances.editor1.on('paste', function(evt) {
+				evt.cancel();
+			});
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "25%";
+				document.getElementById("main").style.marginLeft = "25%";
+				document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+			
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				document.getElementById("main").style.marginLeft= "0";
+				document.getElementById("main").style.backgroundColor = "white";
+			}
+			
+		</script>
+	</html>	
